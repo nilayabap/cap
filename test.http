@@ -1,1 +1,8 @@
-GET http://localhost:4004/odata/v4/product/printhello(input='Al Habibi') 
+#GET http://localhost:4004/odata/v4/product/printhello(input='Al Habibi') 
+
+#GET http://localhost:4004/odata/v4/product/addition(num1 = 10, num2 = 4) 
+
+#GET http://localhost:4004/rest/product/addition(num1 = 10, num2 = 4) 
+
+#GET http://localhost:4004/odata/v4/product/MyFunction(Category = 2) 
+GET http://localhost:4004/rest/product/MyFunction(Category = 2) 
