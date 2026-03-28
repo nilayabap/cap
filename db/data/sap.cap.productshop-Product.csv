@@ -1,4 +1,5 @@
-ID,name,stock,price,category
-1,BMW,12,54678,1
-2,Audi,20,7689,2
-3,Maruti,30,8970,3
+ID,name,stock,price,emission,rating,criticality,createdAt,createdBy,modifiedAt,modifiedBy,supplier_ID,category,Progress
+1,BMW,2000,10000000,5,A+,1,2026-03-26,ME,,,1,10,20
+2,AUDI,1000,13000000,4.1,A+,1,2026-03-22,HIM,,,1,15,10
+3,Maruti,9000,600000,3,D,4,2026-03-20,HIS,,,3,12,60
+4,Tata,70000,1000000,2,D,5,2026-03-10,THEM,,,2,20,90

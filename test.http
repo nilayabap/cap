@@ -8,7 +8,44 @@
 #GET http://localhost:4004/rest/product/MyFunction(Category = 2) 
 
 #Product
+
 #GET http://localhost:4004/odata/v4/productshop/Product
 
 #Supplier
-GET http://localhost:4004/odata/v4/productshop/Supplier
+#GET http://localhost:4004/odata/v4/productshop/Supplier
+
+#*************** Post Request to Create data
+
+#POST http://localhost:4004/odata/v4/productshop/Product
+#Content-Type: application/json
+
+#    {
+#      "emission": 1234,
+#      "rating": "Z-",
+#      "name": "BMW2",
+#      "stock": 12,
+#      "price": 54678,
+#      "category": 1
+#    }
+
+
+#GET http://localhost:43313/odata/v4/productshop/Product?$expand=supplier
+#GET http://localhost:43313/odata/v4/productshop/Supplier?$expand=products
+
+
+#GET http://localhost:43313/odata/v4/productshop/Product?$expand=supplier&$select=ID,name
+
+
+#GET http://localhost:45575/odata/v4/productshop/Product?$expand=conversation&$select=ID,name
+
+
+#
+#GET http://localhost:4004/odata/v4/productshop/MyFunction(name = 'BMW')
+
+
+POST http://localhost:4004/odata/v4/productshop/MyAction
+Content-Type: application/json
+
+{
+    "name" : "BMW"
+}

@@ -3,14 +3,58 @@
   "version": "1.0.0",
   "description": "A simple CAP project.",
   "dependencies": {
+    "@cap-js/hana": "^2",
     "@sap/cds": "^9",
-    "express": "^4"
+    "@sap/hdi-deploy": "^5.6.1",
+    "express": "^4",
+    "hdb": "^2.27.1"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^2"
+    "@cap-js/sqlite": "^2",
+    "cds-plugin-ui5": "^0.13.0",
+    "eslint": "^9.39.1"
   },
   "scripts": {
-    "start": "cds serve"
+    "start": "cds serve",
+    "watch-productshop": "cds watch --open ns.productshop/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-products": "cds watch --open ns.products/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-productlist": "cds watch --open ap.productlist/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
-  "private": true
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/productshop",
+    "app/products",
+    "app/productlist"
+  ],
+  "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "john": {
+              "roles": [
+                "productmanager"
+              ]
+            },
+            "mario": {
+              "password": "initial",
+              "roles": [
+                "productmanager"
+              ]
+            }
+          }
+        }
+      },
+    "db":{
+    "kind": "sqlite",
+    "credential": {
+      "database": "db.sqlite"
+       }
+      }
+    }
+  }
 }

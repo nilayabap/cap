@@ -1,0 +1,1 @@
+using productshop as service from '../../srv/product-service';

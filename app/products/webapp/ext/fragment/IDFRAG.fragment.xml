@@ -1,0 +1,3 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Button id="Button" core:require="{ handler: 'ns/products/ext/fragment/IDFRAG.controller'}" text="IDFRAG" press="handler.onPress" />
+</core:FragmentDefinition>
